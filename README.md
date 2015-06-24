@@ -6,6 +6,8 @@
 
 >  tabBar.image = [UIImage imageNamed:@"图片名"];
 
+>  tabBar.selectedImage = [UIImage imageNamed:@"图片名"];
+
 >  tabBar.itemCount = 5;//可以设置为3
 
 >  tabBar.controller = self;
