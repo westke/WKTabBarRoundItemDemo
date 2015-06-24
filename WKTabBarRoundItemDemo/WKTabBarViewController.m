@@ -17,10 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    WKTabBar *tabBar = [[WKTabBar alloc] init];
-    tabBar.image = [UIImage imageNamed:@"divisionLogo"];
-    tabBar.itemCount = 5;
-    tabBar.controller = self;
+    WKTabBar *tabBar        = [[WKTabBar alloc] init];
+    tabBar.image            = [UIImage imageNamed:@"divisionLogo"];
+    tabBar.selectedImage = [UIImage imageNamed:@"division"];
+    tabBar.itemCount        = 5;
+    tabBar.controller       = self;
     [self setValue:tabBar forKeyPath:@"tabBar"];
 }
 

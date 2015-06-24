@@ -27,7 +27,7 @@ static CGFloat const kScale = 1.5;
     self = [super initWithFrame:frame];
     if (self) {
         _roundItem    = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_roundItem addTarget:self action:@selector(roundItemClick) forControlEvents:UIControlEventTouchUpInside];
+        [_roundItem addTarget:self action:@selector(roundItemClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_roundItem];
     }
     return self;
@@ -88,10 +88,14 @@ static CGFloat const kScale = 1.5;
 }
 
 #pragma mark - roundItemClick 
-- (void)roundItemClick {
+- (void)roundItemClick:(UIButton *)button {
+    if (button.isSelected) {
+        return;
+    }
     if (_controller) {
         _controller.selectedIndex = kItemCount == 3 ? 1 :2;
     }
+    button.selected = !button.isSelected;
 }
 #pragma mark - Setter
 - (void)setItemCount:(NSInteger)itemCount {
@@ -105,5 +109,17 @@ static CGFloat const kScale = 1.5;
     self.roundItem.size = CGSizeMake(width, hight);
     [self setNeedsDisplay];
 }
-
+- (void)setSelectedImage:(UIImage *)selectedImage
+{
+    [_roundItem setImage:selectedImage forState:UIControlStateSelected];
+    CGFloat width       = _roundItem.currentImage.size.width * kScale;
+    CGFloat hight       = _roundItem.currentImage.size.height * kScale;
+    self.roundItem.size = CGSizeMake(width, hight);
+    [self setNeedsDisplay];
+}
+- (void)setSelectedItem:(UITabBarItem *)selectedItem
+{
+    _roundItem.selected = NO;
+    [super setSelectedItem:selectedItem];
+}
 @end
