@@ -14,6 +14,10 @@
 		FFADA9F11B3A7E16009B3927 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFADA9F01B3A7E16009B3927 /* Images.xcassets */; };
 		FFADA9F41B3A7E16009B3927 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFADA9F21B3A7E16009B3927 /* LaunchScreen.xib */; };
 		FFADAA001B3A7E16009B3927 /* WKTabBarRoundItemDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FFADA9FF1B3A7E16009B3927 /* WKTabBarRoundItemDemoTests.m */; };
+		FFADAA0C1B3A7E59009B3927 /* WKTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFADAA0B1B3A7E59009B3927 /* WKTabBarViewController.m */; };
+		FFADAA0F1B3A7E74009B3927 /* WKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FFADAA0E1B3A7E74009B3927 /* WKTabBar.m */; };
+		FFADAA121B3A7E89009B3927 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FFADAA111B3A7E89009B3927 /* UIImage+Extension.m */; };
+		FFADAA151B3A7E99009B3927 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FFADAA141B3A7E99009B3927 /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		FFADA9F91B3A7E16009B3927 /* WKTabBarRoundItemDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WKTabBarRoundItemDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFADA9FE1B3A7E16009B3927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFADA9FF1B3A7E16009B3927 /* WKTabBarRoundItemDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKTabBarRoundItemDemoTests.m; sourceTree = "<group>"; };
+		FFADAA0A1B3A7E59009B3927 /* WKTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTabBarViewController.h; sourceTree = "<group>"; };
+		FFADAA0B1B3A7E59009B3927 /* WKTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTabBarViewController.m; sourceTree = "<group>"; };
+		FFADAA0D1B3A7E74009B3927 /* WKTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKTabBar.h; sourceTree = "<group>"; };
+		FFADAA0E1B3A7E74009B3927 /* WKTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKTabBar.m; sourceTree = "<group>"; };
+		FFADAA101B3A7E89009B3927 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
+		FFADAA111B3A7E89009B3927 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		FFADAA131B3A7E99009B3927 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		FFADAA141B3A7E99009B3927 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,9 @@
 		FFADA9E21B3A7E16009B3927 /* WKTabBarRoundItemDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FFADAA0A1B3A7E59009B3927 /* WKTabBarViewController.h */,
+				FFADAA0B1B3A7E59009B3927 /* WKTabBarViewController.m */,
+				FFADAA091B3A7E3F009B3927 /* WKTarBarRoundItem */,
 				FFADA9E71B3A7E16009B3927 /* AppDelegate.h */,
 				FFADA9E81B3A7E16009B3927 /* AppDelegate.m */,
 				FFADA9EA1B3A7E16009B3927 /* ViewController.h */,
@@ -117,6 +132,19 @@
 				FFADA9FE1B3A7E16009B3927 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FFADAA091B3A7E3F009B3927 /* WKTarBarRoundItem */ = {
+			isa = PBXGroup;
+			children = (
+				FFADAA0D1B3A7E74009B3927 /* WKTabBar.h */,
+				FFADAA0E1B3A7E74009B3927 /* WKTabBar.m */,
+				FFADAA101B3A7E89009B3927 /* UIImage+Extension.h */,
+				FFADAA111B3A7E89009B3927 /* UIImage+Extension.m */,
+				FFADAA131B3A7E99009B3927 /* UIView+Extension.h */,
+				FFADAA141B3A7E99009B3927 /* UIView+Extension.m */,
+			);
+			path = WKTarBarRoundItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFADAA0C1B3A7E59009B3927 /* WKTabBarViewController.m in Sources */,
 				FFADA9EC1B3A7E16009B3927 /* ViewController.m in Sources */,
 				FFADA9E91B3A7E16009B3927 /* AppDelegate.m in Sources */,
+				FFADAA151B3A7E99009B3927 /* UIView+Extension.m in Sources */,
+				FFADAA121B3A7E89009B3927 /* UIImage+Extension.m in Sources */,
+				FFADAA0F1B3A7E74009B3927 /* WKTabBar.m in Sources */,
 				FFADA9E61B3A7E16009B3927 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +379,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = WKTabBarRoundItemDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -357,7 +391,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = WKTabBarRoundItemDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
