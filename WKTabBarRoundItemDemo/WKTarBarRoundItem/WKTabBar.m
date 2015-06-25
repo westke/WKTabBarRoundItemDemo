@@ -41,13 +41,13 @@ static CGFloat const kScale = 1.5;
     //把消除的上边线花出来，但是留出少许空间
     CGPoint startPoint   = CGPointMake(0, 0);
     CGPoint endPoint     = CGPointMake(_roundItem.x + kFixTopLineSpace, 0);
-    [self drawLineWithContext:context startPoint:startPoint endPoint:endPoint];
+    [self drawLineInContext:context startPoint:startPoint endPoint:endPoint];
     CGFloat width        = [UIScreen mainScreen].bounds.size.width;
     startPoint           = CGPointMake(_roundItem.x - kFixTopLineSpace + CGRectGetWidth(_roundItem.bounds), 0);
     endPoint             = CGPointMake(width, 0);
-    [self drawLineWithContext:context startPoint:startPoint endPoint:endPoint];
+    [self drawLineInContext:context startPoint:startPoint endPoint:endPoint];
 }
-- (void)drawLineWithContext:(CGContextRef)context startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint {
+- (void)drawLineInContext:(CGContextRef)context startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint {
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, NULL, startPoint.x, startPoint.y);
     CGPathAddLineToPoint(path, NULL, endPoint.x, endPoint.y);
