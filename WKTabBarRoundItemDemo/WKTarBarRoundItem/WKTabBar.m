@@ -18,7 +18,7 @@ static NSInteger kItemCount = 0;
 static CGFloat const kScale = 1.5;
 
 @interface WKTabBar()
-@property (nonatomic, weak) UIButton *roundItem;
+@property (nonatomic, strong) UIButton *roundItem;
 
 @end
 
